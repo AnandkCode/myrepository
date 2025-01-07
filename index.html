@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp DP Optimizer - Professional Profile Picture Tool</title>
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Professional WhatsApp DP optimizer with smart blur background, multiple size options, and high-quality image processing. Create perfect profile pictures instantly.">
+    <meta name="keywords" content="WhatsApp DP, profile picture optimizer, WhatsApp profile photo, image resize, blur background, professional DP">
+    <meta name="author" content="WhatsApp DP Optimizer">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="WhatsApp DP Optimizer - Professional Profile Picture Tool">
+    <meta property="og:description" content="Create perfect WhatsApp profile pictures with smart blur background and multiple size options.">
+    <meta property="og:type" content="website">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icon-192x192.svg">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#25D366">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WhatsApp DP Optimizer</h1>
+            <p>Create Perfect Profile Pictures Instantly</p>
+        </header>
+        
+        <main>
+            <section id="upload-section">
+                <div class="upload-container" id="drop-zone">
+                    <input type="file" id="image-upload" accept="image/jpeg,image/png,image/gif" hidden>
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="upload-text">
+                        <h3>Drag & Drop or Click to Upload</h3>
+                        <p>Supports JPEG, PNG, GIF (Max 10MB)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="editor-container" class="hidden">
+                <div class="image-info-panel">
+                    <div class="dimensions-display">
+                        <span id="original-dimensions">Original: 0 x 0</span>
+                        <span id="final-dimensions">Final: 500 x 500</span>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <h3>Output Size</h3>
+                        <div class="size-options">
+                            <button data-size="192" class="size-btn">192 x 192</button>
+                            <button data-size="500" class="size-btn selected">500 x 500</button>
+                            <button data-size="640" class="size-btn">640 x 640</button>
+                        </div>
+                    </div>
+                    
+                    <div class="blur-control">
+                        <h3>Background Blur</h3>
+                        <div class="blur-slider-container">
+                            <input type="range" id="blur-slider" min="0" max="50" value="20">
+                            <span id="blur-value">20</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preview-container">
+                    <canvas id="preview-canvas"></canvas>
+                    <div class="loading-overlay hidden">
+                        <div class="spinner"></div>
+                        <span>Processing...</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="reset-btn" class="secondary-btn">
+                        <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button id="download-btn" class="primary-btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            </section>
+            
+            <section id="features-section">
+                <h2>Why Choose Our Tool?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-crop"></i>
+                        <h3>Smart Cropping</h3>
+                        <p>Maintains perfect 1:1 ratio with intelligent background blur</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <h3>Multiple Sizes</h3>
+                        <p>Choose from 192x192, 500x500, or 640x640 pixels</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Fast Processing</h3>
+                        <p>Instant optimization with high-quality results</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Privacy First</h3>
+                        <p>All processing happens in your browser</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2024 WhatsApp DP Optimizer | Privacy-Focused & Free to Use</p>
+        </footer>
+    </div>
+    
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
